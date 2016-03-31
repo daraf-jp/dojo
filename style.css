@@ -117,6 +117,21 @@ th, td{
 .bold{
   font-weight: 600;
 }
+.pink{
+  color: #FC0070;
+}
+.brown{
+  color: #8C5200;
+}
+.green{
+  color: #86DF02;
+}
+.blue{
+  color: #0078FC;
+}
+.yellow{
+  color: #FCE100;
+}
 
 .content{
   width: 980px;
