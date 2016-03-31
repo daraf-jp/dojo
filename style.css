@@ -211,7 +211,7 @@ header ul li a:hover{
 #first .quote{
   font-style: italic;
   color: #555;
-  padding: 20px 40px;
+  padding: 40px 0px;
   margin-top: 50px;
   background-image: url("img/back.png");
   text-align: center;
@@ -235,6 +235,52 @@ header ul li a:hover{
   width: 100px;
   display: block;
   border-radius: 50%;
+}
+#first .carousel-indicators{
+  bottom: 0px;
+  margin-bottom: 0px;
+}
+#first .carousel-control i{
+  font-size: 40px;
+  width: 45px;
+  height: 45px;
+  background-color: #FC9300;
+  color: #fff;
+  top: 50%;
+  position: absolute;
+  margin-top: -22px;
+  border-radius: 50%;
+  text-shadow: none;
+}
+#first .carousel-control{
+  background-image: none;
+  width: auto;
+  height: auto;
+  opacity: 0.9;
+}
+#first .carousel-control.left i{
+  left: 30px;
+}
+#first .carousel-control.right i{
+  right: 30px;
+}
+#first .carousel-indicators li{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px 5px;
+  width: 12px;
+  height: 12px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 50%;
+  border: none;
+}
+#first .carousel-indicators .active{
+  width: 14px;
+  height: 14px;
+  margin: 0px 5px;
+  background-color: rgba(0,0,0,0.5);
 }
 
 #recuruitment table{

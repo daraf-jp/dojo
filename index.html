@@ -62,50 +62,65 @@
           <li>最新の開発プロセスを体験したい方</li>
           <li>サービスを安価に発注する方法を知りたい方</li>
         </ul>
-        <!-- <p>
-          <span class="emphasis">プログラミングをせず、WEBサービスを作りたい。</span>
-          もしあなたがプログラマーでないなら、一度くらい考えたことはありませんか。「プログラミングをするスキルはないが、作りたいWEBサービスがある」と言い直してもいいです。もしくは、「プログラミングをするスキルはないが、作りたいWEBサービスがある、
-          <span class="emphasis">ただ予算はほとんどない。</span>
-          」と追記してもいいでしょう。
-        </p>
-        <p>
-          これに対する、もっともハードな解決方法は、
-          <span class="emphasis">プログラミングを学ぶことだ。</span>
-          スキルがないなら、スキルを身につければいいじゃない！という解決方法だ。プログラミング系のスクールやブートキャンプはこの解決方法だ。しかし、これには多大な労力が必要になる。当然だ！プログラミングを身につけるのはそんなに簡単じゃない(何事にも程度はあるけど)。多くのプログラミングができる人が、どのくらいプログラミングに時間を使っているか知った時、サービスを作ることだけが目的の人は卒倒するのではないか。
-        </p>
-        <p>
-          別の解決方法に、
-          <span class="emphasis">「プログラミングができる人にプログラムを書いてもらう」</span>
-          という解決方法がある。これがもっとも一般的な解決方法だろう。エンジニアを雇用している会社なら、社内の人間に頼めばいい。雇用していないなら、外部の人間に業務委託すればいい。新しくスタートアップを始める場合や、新規事業を始める場合なら、エンジニアを採用すればいい(エンジニアを安く買い叩けばいいというニュアンスが常につきまとうけど)。
-        </p>
-        <p>
-          この一般的な解決方法の重要にして、問題の温床になるポイントは、「企画を考える人」と「実装する人」が別々であるという点だ。この前提に立った瞬間に、
-          <span class="emphasis">全ての物事は「コミュニケーション」を前提</span>
-          とする。コミュニケーションには必ず齟齬が発生する。この必ず発生する齟齬が問題になる。
-        </p>
-        <p>
-          つまり、WEB上にサービスを作りたい場合、「プログラミングができる人にプログラムを書いてもらう」というアプローチは現状とても有力であるが、「コミュニケーション」の問題を考えなければ色々な問題にぶつかるということになる。
-        </p> -->
       </div>
-      <div class="quote">
-        <div class="middle-content">
-          <div class="quote-bos inline-block">
-            <div class="media">
-              <div class="media-left">
-                <img src="img/watanabe.png">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div class="quote">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <div class="middle-content">
+                <div class="quote-box inline-block">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="img/watanabe.png">
+                    </div>
+                    <div class="media-body">
+                      <p>
+                        ベトナムのオフショアを見ていて、このWEBサービス発注道場はとても参考になると思う。
+                      </p>
+                      <div class="profile">
+                        <div class="bold">株式会社インタレストマーケティング 執行役員</div>
+                        <div class="name">渡辺 友太</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="media-body">
-                <p>
-                  ベトナムのオフショアを見ていて、このWEBサービス発注道場はとても参考になると思う。
-                </p>
-                <div class="profile">
-                  <div class="bold">株式会社インタレストマーケティング 執行役員</div>
-                  <div class="name">渡辺 友太</div>
+            </div>
+            <div class="item">
+              <div class="middle-content">
+                <div class="quote-box inline-block">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="img/watanabe.png">
+                    </div>
+                    <div class="media-body">
+                      <p>
+                        ベトナムのオフショアを見ていて、このWEBサービス発注道場はとても参考になると思う。
+                      </p>
+                      <div class="profile">
+                        <div class="bold">株式会社インタレストマーケティング 執行役員</div>
+                        <div class="name">渡辺 友太</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+          </a>
         </div>
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
       </div>
     </div>
     <div id="background" class="stanza gray">
@@ -246,17 +261,6 @@
             scrollTop: 0
         }, 500);
         return false;
-    });
-  });
-
-  $(function(){
-    $('a[href^=#]').click(function(){
-      var speed = 500;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $("html, body").animate({scrollTop:position}, speed, "swing");
-      return false;
     });
   });
 </script>
