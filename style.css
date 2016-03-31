@@ -99,7 +99,6 @@ th, td{
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
-  margin-top: 45px;
 }
 .btn:hover{
   border-color: rgba(252,147,0,1);
@@ -299,6 +298,10 @@ header ul li a:hover{
 #recuruitment .ex{
   font-size: 14px;
   margin-top: 5px;
+}
+
+.apprication-btn-content{
+  padding: 45px 0px;
 }
 
 #footer{
