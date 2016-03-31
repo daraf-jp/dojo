@@ -190,6 +190,9 @@ header ul li a:hover{
   color: rgba(252,147,0,1);
 }
 
+#first{
+  padding-bottom: 0px;
+}
 #first .quote{
   font-style: italic;
   color: #555;
@@ -207,10 +210,11 @@ header ul li a:hover{
   text-align: left;
 }
 #first .quote .media-body .profile{
-  text-align: right;
+  text-align: left;
 }
 #first .quote p{
   font-size: 16px;
+  line-height: 1.5;
 }
 #first .quote img{
   width: 100px;
@@ -247,7 +251,6 @@ header ul li a:hover{
   color: rgba(255,255,255,0.9);
   width: 45px;
   height: 45px;
-  border: 1px solid #fff;
   text-align: center;
   display: table;
   border-radius: 5px;
