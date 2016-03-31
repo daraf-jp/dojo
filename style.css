@@ -189,6 +189,9 @@ header ul li a:hover{
   color: rgba(252,147,0,1);
 }
 
+#first{
+  padding-bottom: 0px;
+}
 #first .quote{
   font-style: italic;
   color: #555;
