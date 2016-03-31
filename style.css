@@ -1,7 +1,7 @@
 html,body{
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-family: arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #686868;
@@ -12,7 +12,7 @@ html,body{
   background: linear-gradient(to right, rgba(252,147,0,1) 0%,rgba(254,199,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc9300', endColorstr='#fec700',GradientType=1 ); /* IE6-9 */
   width: 100%;
-  line-height: 1.4;
+  line-height: 1.6;
   box-sizing: border-box;
 }
 body{
@@ -41,8 +41,8 @@ a img{
   border: 0;
 }
 p{
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.6;
 }
 table{
   border-collapse: collapse;
@@ -157,6 +157,7 @@ th, td{
 .middle-content ul li{
   list-style-type: disc;
   line-height: 1.6;
+  font-size: 14px;
 }
 .middle-content ul.decimal li{
   list-style-type: decimal;
