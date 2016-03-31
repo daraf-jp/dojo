@@ -148,7 +148,7 @@ th, td{
   margin: 15px 0px;
 }
 .middle-content .image{
-  margin: 15px 0px;
+  margin: 25px 0px;
 }
 .middle-content h2{
   font-size: 28px;
@@ -340,7 +340,7 @@ header ul li a:hover{
 }
 
 .stanza{
-  padding: 50px 0px;
+  padding: 80px 0px;
 }
 .stanza.gray{
   background-color: #f5f5f5;
