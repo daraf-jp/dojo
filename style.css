@@ -209,10 +209,11 @@ header ul li a:hover{
   text-align: left;
 }
 #first .quote .media-body .profile{
-  text-align: right;
+  text-align: left;
 }
 #first .quote p{
   font-size: 16px;
+  line-height: 1.5;
 }
 #first .quote img{
   width: 100px;
