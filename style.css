@@ -296,6 +296,10 @@ header ul li a:hover{
   width: 75%;
   padding: 16px 12px;
 }
+#recuruitment .ex{
+  font-size: 14px;
+  margin-top: 5px;
+}
 
 #footer{
   padding: 15px 0px;
