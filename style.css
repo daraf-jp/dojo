@@ -4,7 +4,7 @@ html,body{
   font-size: 14px;
   font-family: arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: #333;
+  color: #686868;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fc9300+0,fec700+100 */
   background: rgb(252,147,0); /* Old browsers */
   background: -moz-linear-gradient(left, rgba(252,147,0,1) 0%, rgba(254,199,0,1) 100%); /* FF3.6-15 */
@@ -21,6 +21,7 @@ body{
 h1,h2,h3,h4,h5,h6{
   margin: 0;
   padding: 0;
+  color: #333;
 }
 ul, li{
   margin: 0px;
@@ -192,8 +193,28 @@ header .right-content ul li a{
   font-style: italic;
   color: #555;
   padding: 20px 40px;
-  margin: 30px 0px;
+  margin-top: 50px;
   background-image: url("img/back.png");
+  text-align: center;
+}
+#first .quote .media-left{
+  vertical-align: middle;
+  padding-right: 20px;
+}
+#first .quote .media-body{
+  vertical-align: middle;
+  text-align: left;
+}
+#first .quote .media-body .profile{
+  text-align: right;
+}
+#first .quote p{
+  font-size: 16px;
+}
+#first .quote img{
+  width: 100px;
+  display: block;
+  border-radius: 50%;
 }
 
 #footer{
