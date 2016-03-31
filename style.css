@@ -88,8 +88,8 @@ th, td{
   vertical-align: top;
 }
 .btn{
-  border: 2px solid #04961B;
-  color: #04961B;
+  border: 2px solid rgba(252,147,0,1);
+  color: rgba(252,147,0,1);
   text-align: center;
   font-size: 18px;
   font-weight: 600;
@@ -102,8 +102,8 @@ th, td{
   margin-top: 45px;
 }
 .btn:hover{
-  border-color: #04961B;
-  background-color:#04961B;
+  border-color: rgba(252,147,0,1);
+  background-color:rgba(252,147,0,1);
   color: #fff;
 }
 .half-width{
@@ -186,10 +186,7 @@ header ul li a{
   font-weight: 600;
 }
 header ul li a:hover{
-  color: #0071CC;
-}
-header .right-content ul li a{
-  padding: 0px 10px;
+  color: rgba(252,147,0,1);
 }
 
 #first .quote{
@@ -244,7 +241,7 @@ header .right-content ul li a{
   z-index: 9999;
 }
 #page-top a {
-  background-color: #0062B1;
+  background-color: rgba(252,147,0,1);
   text-decoration: none;
   color: rgba(255,255,255,0.9);
   width: 45px;
