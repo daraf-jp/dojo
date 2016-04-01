@@ -185,25 +185,16 @@ th, td{
 }
 
 header{
-  height: 50px;
   padding: 0px 20px;
 }
 header .inner{
+  padding: 12px 0px 9px;
   border-bottom: 1px solid #ddd;
 }
 header img{
   display: block;
 }
-header ul{
-  height: 50px;
-}
-header ul li{
-  display: table;
-  height: 50px;
-}
 header ul li a{
-  display: table-cell;
-  vertical-align: middle;
   color: #aaa;
   font-weight: 600;
 }
@@ -213,9 +204,9 @@ header ul li a:hover{
 
 .top-pop{
   position: absolute;
-  width: 185px;
-  left: 17px;
-  top: 30px;
+  width: 160px;
+  left: 8px;
+  top: 5px;
 }
 
 #first{
