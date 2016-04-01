@@ -4,7 +4,7 @@ html,body{
   font-size: 16px;
   font-family: arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  color: #686868;
+  color: #111;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fc9300+0,fec700+100 */
   background: rgb(252,147,0); /* Old browsers */
   background: -moz-linear-gradient(left, rgba(252,147,0,1) 0%, rgba(254,199,0,1) 100%); /* FF3.6-15 */
@@ -22,6 +22,9 @@ h1,h2,h3,h4,h5,h6{
   margin: 0;
   padding: 0;
   color: #333;
+}
+h1 {
+  margin-bottom: 25px;
 }
 ul, li{
   margin: 0px;
@@ -117,7 +120,7 @@ th, td{
   font-weight: 600;
 }
 .bold{
-  font-weight: 600;
+  font-weight: 500;
 }
 .pink{
   color: #FC0070;
@@ -343,7 +346,7 @@ header ul li a:hover{
 }
 
 .stanza{
-  padding: 80px 0px;
+  padding: 60px 0px;
 }
 .stanza.gray{
   background-image: url("img/back2.png");
