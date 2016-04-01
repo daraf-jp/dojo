@@ -67,6 +67,9 @@ th, td{
 .middle{
   vertical-align: middle;
 }
+.bottom{
+  vertical-align: bottom;
+}
 .table{
   display: table;
   width: 100%;
