@@ -112,8 +112,8 @@ th, td{
   width: 50%;
 }
 .emphasis{
-  background-color: rgba(231, 64, 46, 0.15);
-  font-size: 17px;
+  background-color: rgba(252, 147, 0, 0.15);
+  font-size: 16px;
   font-weight: 600;
 }
 .bold{
@@ -141,6 +141,7 @@ th, td{
   margin: 0 auto;
   background-color: #fff;
   box-shadow: 0px 3px 20px rgba(0,0,0,0.25);
+  position: relative;
 }
 .middle-content{
   width: 550px;
@@ -207,6 +208,13 @@ header ul li a:hover{
   color: rgba(252,147,0,1);
 }
 
+.top-pop{
+  position: absolute;
+  width: 185px;
+  left: 17px;
+  top: 30px;
+}
+
 #first{
   padding-bottom: 0px;
 }
@@ -215,12 +223,16 @@ header ul li a:hover{
   color: #555;
   padding: 40px 0px;
   margin-top: 50px;
-  background-image: url("img/back.png");
+  background-image: url("img/back3.png");
   text-align: center;
+}
+#first .quote .media{
+  background-color: rgba(255,255,255,0.4);
+  padding: 15px;
 }
 #first .quote .media-left{
   vertical-align: middle;
-  padding-right: 20px;
+  padding-right: 15px;
 }
 #first .quote .media-body{
   vertical-align: middle;
@@ -228,10 +240,12 @@ header ul li a:hover{
 }
 #first .quote .media-body .profile{
   text-align: left;
+  font-size: 14px;
 }
 #first .quote p{
   font-size: 16px;
   line-height: 1.5;
+  margin-top: 5px;
 }
 #first .quote img{
   width: 100px;
@@ -239,7 +253,7 @@ header ul li a:hover{
   border-radius: 50%;
 }
 #first .carousel-indicators{
-  bottom: 0px;
+  bottom: 10px;
   margin-bottom: 0px;
 }
 #first .carousel-control i{
@@ -307,23 +321,6 @@ header ul li a:hover{
   padding: 45px 0px;
 }
 
-#footer{
-  padding: 15px 0px;
-}
-#footer .footer-bottom{
-  margin-top: 10px;
-}
-#footer ul li{
-  float: left;
-  margin-right: 15px;
-}
-#footer ul li a{
-  color: #999;
-}
-#footer .copyright{
-  color: #999;
-}
-
 #page-top {
   position: fixed;
   bottom: 20px;
@@ -349,7 +346,7 @@ header ul li a:hover{
   padding: 80px 0px;
 }
 .stanza.gray{
-  background-color: #f5f5f5;
+  background-image: url("img/back2.png");
 }
 
 @media(max-width: 1050px){
