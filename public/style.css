@@ -132,10 +132,13 @@ th, td{
   color: #86DF02;
 }
 .blue{
-  color: #0078FC;
+  color: #0166D6;
 }
 .yellow{
   color: #FCE100;
+}
+.margin-bottom-0{
+  margin-bottom: 0px !important;
 }
 
 .content{
@@ -199,10 +202,14 @@ header .right-content a{
 }
 
 .top-pop{
+  position: fixed;
+  width: 680px;
+}
+.top-pop img{
   position: absolute;
   width: 180px;
-  left: -220px;
-  top: 0px;
+  left: -210px;
+  top: 10px;
 }
 
 .menu{
@@ -240,6 +247,14 @@ header .right-content a{
 }
 .title-head h1{
   margin-bottom: 15px;
+}
+.title-head h1 img{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
 }
 .title-head .time{
   color: #555;
@@ -336,6 +351,66 @@ header .right-content a{
   background-color: rgba(255,255,255,0.8);
 }
 
+#sponsor .sponsor{
+  margin-bottom: 45px;
+}
+#sponsor .sponsor .sponsor-img{
+  display: block;
+  margin: 0 auto 4px;
+  width: 320px;
+  padding: 5px 0px 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+#sponsor .sponsor .sponsor-img img{
+  display: block;
+  margin: 0 auto;
+}
+#sponsor .sponsor.daraf img{
+  height: 60px;
+}
+#sponsor .sponsor.supernova img{
+  height: 70px;
+}
+#sponsor .sponsor .name{
+  font-size: 18px;
+  font-weight: bold;
+}
+#sponsor h3{
+  margin-bottom: 10px;
+}
+#sponsor .teacher{
+  margin-bottom: 40px;
+}
+#sponsor .teacher .media-left{
+  width: 120px;
+}
+#sponsor .teacher .media-left img{
+  width: 100%;
+  display: block;
+}
+#sponsor .teacher .media-body{
+  padding-left: 20px;
+  line-height: 1.3;
+}
+#sponsor .teacher .media-body .name{
+  font-size: 18px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+#sponsor .teacher .media-body .reading{
+  font-size: 14px;
+}
+#sponsor .teacher .media-body .post{
+  font-size: 14px;
+  margin-top: 10px;
+}
+#sponsor .teacher .media-body .ex{
+  font-size: 14px;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
 #recuruitment table{
   margin-top: 20px;
 }
@@ -356,6 +431,11 @@ header .right-content a{
 
 .apprication-btn-content{
   padding: 45px 0px;
+}
+
+.copyright{
+  margin-top: 15px;
+  color: #7B4B02
 }
 
 #page-top {
