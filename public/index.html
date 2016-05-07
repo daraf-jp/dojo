@@ -15,10 +15,31 @@
   <header id="top">
     <div class="content">
       <div class="right-content right">
-        <a href="https://docs.google.com/a/daraf.co.jp/forms/d/1IExex4cdIFgwxTyOOJq37aeQG8r8OewKfM7lLjHmRuU/viewform" target="_blank">
+        <a href="https://docs.google.com/a/daraf.co.jp/forms/d/1IExex4cdIFgwxTyOOJq37aeQG8r8OewKfM7lLjHmRuU/viewform" target="_blank" class="contact">
           <i class="fa fa-envelope"></i>
           <strong>お問い合わせ</strong>
         </a>
+      </div>
+      <div class="mobile-header">
+        <div class="dropdown right">
+          <a id="dLabel" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-reorder"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dLabel">
+            <li><a href="#top">トップ</a></li>
+            <li><a href="#background">開設の背景</a></li>
+            <li><a href="#curriculum">カリキュラム</a></li>
+            <li><a href="#sponsor">主催・講師</a></li>
+            <li><a href="#recuruitment">募集要項</a></li>
+            <li>
+              <a href="https://docs.google.com/a/daraf.co.jp/forms/d/1IExex4cdIFgwxTyOOJq37aeQG8r8OewKfM7lLjHmRuU/viewform" target="_blank" class="contact">
+                お問い合わせ
+              </a>
+            </li>
+            <li><a href="#apprication">お申し込み</a></li>
+          </ul>
+        </div>
+        <div class="clear"></div>
       </div>
       <div class="clear"></div>
     </div>
@@ -88,9 +109,8 @@
             <li>サービスを安価に発注する方法を知りたい方</li>
           </ul>
         </div>
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
           <div class="quote">
-            <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
               <div class="item active">
                 <div class="middle-content">
@@ -133,7 +153,6 @@
                 </div>
               </div>
             </div>
-            <!-- Controls -->
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
               <i class="fa fa-angle-left"></i>
             </a>
@@ -141,12 +160,11 @@
               <i class="fa fa-angle-right"></i>
             </a>
           </div>
-          <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
           </ol>
-        </div>
+        </div> -->
       </div>
       <div id="background" class="stanza gray">
         <div class="middle-content">
@@ -228,19 +246,8 @@
             <i class="fa fa-building"></i>
             主催
           </h3>
-          <div class="sponsor daraf">
-            <div class="sponsor-img">
-              <img src="img/daraf.png">
-            </div>
-            <div class="name">
-              株式会社ダラフ
-            </div>
-            <div class="ex">
-              企業向け研修ASP「Selectbot」を始め、企業を対象にしたソフトウェアを企画・開発。また、ソフトウェア受託開発、プログラミングスクールの運営、発注コンサルティングサービスなども行う。
-            </div>
-          </div>
-          <div class="sponsor supernova">
-            <div class="sponsor-img">
+          <div class="company supernova">
+            <div class="company-img">
               <img src="img/supernova.jpg">
             </div>
             <div class="name">
@@ -250,32 +257,7 @@
               Supernova（スーパーノヴァ）は10年間で2000億円以上の新産業創出を行うスタートアップを生み出す共創型オープンコミュニティです。Supernovaでは既存の投資家たちが『事業を評価しづらい、技術的・構造的に困難、回収期間が読めない等リスクが大きいが社会的価値が大きい領域（＝投資家空白地帯）』にチャレンジしていくスタートアップの支援をしています。
             </div>
           </div>
-          <h3>
-            <i class="fa fa-user"></i>
-            講師
-          </h3>
-          <div class="teacher">
-            <div class="media">
-              <div class="media-left">
-                <img src="img/saiwaki.jpg">
-              </div>
-              <div class="media-body">
-                <div class="name">
-                  斉脇 一志
-                </div>
-                <div class="reading">
-                  Saiwaki Hitoshi
-                </div>
-                <div class="post">
-                  株式会社ダラフ 代表取締役
-                </div>
-                <div class="ex">
-                  東京理科大学在学中、株式会社ダラフを設立、代表取締役に就任。プログラマーとして、マイクロソフトやリクルートなど大手企業からの、ソフトウェア受託開発やコンサルティングサービスを行う一方、自社製品を企画・ 立ち上げ。現在もプログラマーとして開発責任者を兼任。
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="teacher margin-bottom-0">
+          <div class="person">
             <div class="media">
               <div class="media-left">
                 <img src="img/kurishima.png">
@@ -292,6 +274,42 @@
                 </div>
                 <div class="ex">
                   早稲田大学商学部卒業後、大手資産運用会社にて株式トレーダーやファンドマネジャーを経て、アジア・ヨーロッパにおいて教育領域特化型のシード投資を行う株式会社Viling Venture Partners 代表取締役社長に就任。数多の起業家やクリエイターに関与するうちにイノベーションを起こす人材育成に強い関心を持ち、教育領域の起業家輩出及び起業家育成コミュニティ作りに邁進。
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>
+            <i class="fa fa-user"></i>
+            講師
+          </h3>
+          <div class="company daraf">
+            <div class="company-img">
+              <img src="img/daraf.png">
+            </div>
+            <div class="name">
+              株式会社ダラフ
+            </div>
+            <div class="ex">
+              企業向け研修ASP「Selectbot」を始め、企業を対象にしたソフトウェアを企画・開発。また、ソフトウェア受託開発、プログラミングスクールの運営、発注コンサルティングサービスなども行う。
+            </div>
+          </div>
+          <div class="person margin-bottom-0">
+            <div class="media">
+              <div class="media-left">
+                <img src="img/saiwaki.jpg">
+              </div>
+              <div class="media-body">
+                <div class="name">
+                  斉脇 一志
+                </div>
+                <div class="reading">
+                  Saiwaki Hitoshi
+                </div>
+                <div class="post">
+                  株式会社ダラフ 代表取締役
+                </div>
+                <div class="ex">
+                  東京理科大学在学中、株式会社ダラフを設立、代表取締役に就任。プログラマーとして、マイクロソフトやリクルートなど大手企業からの、ソフトウェア受託開発やコンサルティングサービスを行う一方、自社製品を企画・ 立ち上げ。現在もプログラマーとして開発責任者を兼任。
                 </div>
               </div>
             </div>
