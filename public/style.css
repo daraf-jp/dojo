@@ -206,6 +206,7 @@ header .mobile-header #dLabel{
 header .mobile-header i{
   font-size: 26px;
   color: #fff;
+  cursor: pointer;
 }
 
 .article .content{
