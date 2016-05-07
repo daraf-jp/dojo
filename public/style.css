@@ -198,6 +198,7 @@ header .right-content a{
 }
 header .mobile-header{
   position: relative;
+  display: none;
 }
 header .mobile-header i{
   font-size: 26px;
@@ -527,6 +528,9 @@ header .mobile-header i{
 @media(max-width: 1000px){
   #top .right-content{
     display: none;
+  }
+  header .mobile-header{
+    display: block;
   }
   .menu{
     display: none;
