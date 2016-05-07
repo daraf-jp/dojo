@@ -200,6 +200,9 @@ header .mobile-header{
   position: relative;
   display: none;
 }
+header .mobile-header #dLabel{
+  display: block;
+}
 header .mobile-header i{
   font-size: 26px;
   color: #fff;
@@ -531,6 +534,7 @@ header .mobile-header i{
   }
   header .mobile-header{
     display: block;
+    padding-right: 15px;
   }
   .menu{
     display: none;
