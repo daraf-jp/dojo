@@ -419,7 +419,7 @@ sup {
     height: 80px;
   }
   .codebot-facebook iframe{
-    width: 100%;
+    width: 100% !important;
   }
   .copyright{
     font-size: 13px;
