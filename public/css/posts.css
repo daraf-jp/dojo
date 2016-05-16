@@ -344,6 +344,21 @@ sup {
   margin-top: 15px;
   color: #7B4B02
 }
+.application-box{
+  padding: 20px 0px 30px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: 40px;
+}
+.application-box .text{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.application-box .arrow{
+  font-size: 20px;
+  margin: 0px 0px 5px;
+}
 .codebot-facebook iframe{
   display: block;
   margin: 45px auto 0px;
