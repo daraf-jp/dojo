@@ -185,15 +185,43 @@ th, td{
   list-style-type: decimal;
 }
 
-header{
-  margin-bottom: 8px;
+header .header-nav{
+  list-style-type: none;
+  padding-left: 0px;
+  display: table;
+  width: 100%;
+  margin: 10px 0px 15px;
 }
-header .left-content img{
+header .header-nav li{
+  display: table-cell;
+  vertical-align: middle;
+  width: 33.333%;
+  text-align: center;
+}
+header .header-nav li a{
   display: block;
-}
-header .right-content a{
-  font-size: 14px;
   color: #fff;
+  border: 1px solid #fff;
+  padding: 4px 12px;
+  font-size: 14px;
+  transition-duration: .5s;
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+}
+header .header-nav li:first-child a{
+  border-radius: 6px 0px 0px 6px;
+}
+header .header-nav li:nth-child(2) a{
+  border-left: none;
+  border-right: none;
+}
+header .header-nav li:last-child a{
+  border-radius: 0px 6px 6px 0px;
+}
+header .header-nav li a:hover{
+  color: #fff;
+  background-color: rgba(255,255,255,0.2);
 }
 header .mobile-header{
   position: relative;
