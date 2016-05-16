@@ -218,6 +218,12 @@ header .header-nav a:hover{
 .title-head .author{
   color: #555;
 }
+.title-head .logo{
+  text-align: center;
+}
+.title-head .logo img{
+  width: 45px;
+}
 
 h1,
 h2,
