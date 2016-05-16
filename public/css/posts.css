@@ -218,11 +218,12 @@ header .header-nav a:hover{
 .title-head .author{
   color: #555;
 }
-.title-head .logo{
+.title-head .dojo-logo{
   text-align: center;
+  margin-bottom: 20px;
 }
-.title-head .logo img{
-  width: 45px;
+.title-head .dojo-logo img{
+  width: auto;
 }
 
 h1,
