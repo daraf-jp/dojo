@@ -373,29 +373,13 @@ sup {
   padding-left: 0px;
 }
 .posts.index .article-lists li{
-  display: table;
   border-bottom: 1px solid #ddd;
   padding: 20px 0px;
 }
 .posts.index .article-lists li:first-child{
   padding-top: 0px;
 }
-.posts.index .article-lists li .eye-catching{
-  width: 150px;
-  display: table-cell;
-  vertical-align: top;
-}
-.posts.index .article-lists li .eye-catching .inner{
-  width: 150px;
-  height: 110px;
-  overflow: hidden;
-}
-.posts.index .article-lists li .eye-catching .inner img{
-  width: 100%;
-}
 .posts.index .article-lists li .article-info{
-  display: table-cell;
-  vertical-align: top;
   padding-left: 10px;
 }
 .posts.index .article-lists li .article-info .date{
@@ -437,6 +421,13 @@ sup {
   h2{
     font-size: 24px;
     line-height: 1.2;
+  }
+  .title-head .dojo-logo img{
+    display: block;
+    margin: 0 auto;
+  }
+  .title-head .dojo-logo .logo{
+    margin-top: 5px;
   }
   .posts.index .article-lists li .eye-catching{
     width: 120px;
