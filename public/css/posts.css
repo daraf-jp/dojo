@@ -41,9 +41,18 @@ a:hover{
   color: #004780;
   text-decoration: none;
 }
-img{
+a img{
   border: 0;
+}
+a img:hover{
+  opacity: 0.7;
+}
+img{
   width: 100%;
+  transition-duration: .5s;
+  -webkit-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  -moz-transition-duration: .5s;
 }
 p{
   font-size: 16px;
