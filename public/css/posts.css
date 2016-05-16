@@ -154,23 +154,17 @@ th, td{
   margin: 0 auto;
 }
 
-header ul{
-  list-style-type: none;
-  padding-left: 0px;
-  display: table;
+header .header-nav{
   width: 100%;
   margin: 10px 0px 15px;
 }
-header li{
+header .header-nav a{
   display: table-cell;
   vertical-align: middle;
   width: 33.333%;
   text-align: center;
-}
-header li a{
-  display: block;
-  color: #fff;
   border: 1px solid #fff;
+  color: #fff;
   padding: 4px 12px;
   font-size: 14px;
   transition-duration: .5s;
@@ -178,19 +172,32 @@ header li a{
   -o-transition-duration: .5s;
   -moz-transition-duration: .5s;
 }
-header li:first-child a{
+header .header-nav a:first-child{
   border-radius: 6px 0px 0px 6px;
 }
-header li:nth-child(2) a{
+header .header-nav a:nth-child(2){
   border-left: none;
   border-right: none;
 }
-header li:last-child a{
+header .header-nav a:last-child{
   border-radius: 0px 6px 6px 0px;
 }
-header li a:hover{
+header .header-nav a:hover{
   color: #fff;
   background-color: rgba(255,255,255,0.2);
+}
+
+.top-pop{
+  position: fixed;
+  width: 680px;
+  margin-top: -45px;
+  margin-left: -65px;
+}
+.top-pop img{
+  position: absolute;
+  width: 180px;
+  left: -210px;
+  top: 10px;
 }
 
 .article .middle-content{
@@ -328,6 +335,10 @@ sup {
   margin-top: 15px;
   color: #7B4B02
 }
+.codebot-facebook iframe{
+  display: block;
+  margin: 45px auto 0px;
+}
 
 .posts.index .title-head h1{
   margin-bottom: 0px;
@@ -373,4 +384,38 @@ sup {
 .posts.index .article-lists li .article-info .title a:hover{
   color: #0071CC;
   text-decoration: underline;
+}
+
+@media(max-width: 1000px){
+  .top-pop{
+    display: none;
+  }
+}
+
+@media(max-width: 700px){
+  .middle-content{
+    width: 95%;
+  }
+  .article .middle-content{
+    padding: 30px 10px;
+  }
+}
+
+@media(max-width: 500px){
+  header .header-nav a{
+    font-size: 12px;
+  }
+  .posts.index .article-lists li .eye-catching{
+    width: 120px;
+  }
+  .posts.index .article-lists li .eye-catching .inner{
+    width: 120px;
+    height: 80px;
+  }
+  .codebot-facebook iframe{
+    width: 100%;
+  }
+  .copyright{
+    font-size: 13px;
+  }
 }
