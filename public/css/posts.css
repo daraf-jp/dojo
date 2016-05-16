@@ -238,14 +238,17 @@ blockquote {
 h1 {
   font-size: 30px;
   margin-bottom: 15px;
+  line-height: 1.4;
 }
 h2 {
   font-size: 26px;
   border-left: 8px solid #FCAC00;
   padding-left: 10px;
+  line-height: 1.4;
 }
 h3 {
   font-size: 20px;
+  line-height: 1.2;
 }
 h4 {
   font-size: 16px;
@@ -411,12 +414,24 @@ sup {
   header .header-nav a{
     font-size: 12px;
   }
+  h1{
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  h2{
+    font-size: 24px;
+    line-height: 1.2;
+  }
   .posts.index .article-lists li .eye-catching{
     width: 120px;
   }
   .posts.index .article-lists li .eye-catching .inner{
     width: 120px;
     height: 80px;
+  }
+  .codebot-facebook{
+    width: 100%;
+    overflow: hidden;
   }
   .codebot-facebook iframe{
     width: 100% !important;
