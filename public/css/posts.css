@@ -403,6 +403,10 @@ sup {
 }
 
 @media(max-width: 600px){
+  .codebot-facebook{
+    width: 100%;
+    overflow: hidden;
+  }
   .codebot-facebook iframe{
     width: 100% !important;
   }
@@ -460,10 +464,6 @@ sup {
   .posts.index .article-lists li .eye-catching .inner{
     width: 120px;
     height: 80px;
-  }
-  .codebot-facebook{
-    width: 100%;
-    overflow: hidden;
   }
   .copyright{
     font-size: 13px;
