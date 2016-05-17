@@ -14,6 +14,8 @@
   * mdをエクスポートしコピペ
   * imgタグの data-lity
 * posts/index.html を更新
+  * 投稿日
+  * aタグ
 * git add, commit, push
 * OGP更新 https://developers.facebook.com/tools/debug/og/object/
 
