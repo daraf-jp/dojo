@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <title>受託開発時に決めておくべき「クライアントサイド対応」の優先順位 - WEBサービス発注道場</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta property="og:title" content="受託開発時に決めておくべき「クライアントサイド対応」の優先順位" />
+  <meta property="og:site_name" content="WEBサービス発注道場" />
+  <meta property="og:description" content="WEBサービスの発注方法を身につけるためのプログラムです。WEBサービスの開発プロセスを学ぶ「スクール」という側面と、「発注コンサルティング」という側面を兼ねています。社内であれ、社外であれ、これからエンジニアを採用する場合であれ、エンジニアにコードを書いてもらうための方法を指導します。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://dojo.codebot.io/posts/clientside.html" />
+  <meta property="og:image" content="http://dojo.codebot.io/img/posts/clientside.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="shortcut icon" href="../img/fav.ico">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="../css/lity.css">
+  <link rel="stylesheet" type="text/css" href="../css/posts.css">
+  <script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script src="../js/lity.min.js"></script>
+</head>
+<body class="posts show">
+<header>
+  <div class="middle-content">
+    <div class="header-nav">
+      <a href="../index.html">
+        <i class="fa fa-home"></i>
+        <strong>トップ</strong>
+      </a>
+      <a href="index.html">
+        <i class="fa fa-newspaper-o"></i>
+        <strong>記事</strong>
+      </a>
+      <a href="https://docs.google.com/a/daraf.co.jp/forms/d/1IExex4cdIFgwxTyOOJq37aeQG8r8OewKfM7lLjHmRuU/viewform" target="_blank" class="contact">
+        <i class="fa fa-envelope"></i>
+        <strong>お問い合わせ</strong>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="article">
+<div class="middle-content">
+<div class="top-pop">
+  <a href="https://docs.google.com/a/daraf.co.jp/forms/d/1TNE-FDB2So2sFV2ZqQ7R1yDLKkzJmSQGfiL2x1tL6Ao/viewform" target="_blank">
+    <img src="../img/top-pop.png">
+  </a>
+</div>
+<div class="title-head">
+  <div class="dojo-logo">
+    <img src="../img/top-title.png" class="inline-block middle title" height="22" alt="WEBサービス発注道場">
+    <img src="../img/chara.png" class="inline-block middle logo" height="37px">
+  </div>
+  <h1>受託開発時に決めておくべき「クライアントサイド対応」の優先順位</h1>
+  <div class="info">
+    <div class="time inline-block middle">
+      <i class="fa fa-clock-o inline-block middle"></i>
+      <div class="inline-block middle">2016年5月23日</div>
+    </div>
+    <div class="author inline-block middle">
+      <i class="fa fa-user inline-block middle"></i>
+      <div class="inline-block middle">斉脇 一志</div>
+    </div>
+  </div>
+</div>
+<!-- 記事内容 -->
+
+<img src="../img/posts/clientside.jpg">
+
+<h2>内容について</h2>
+<p>ここでは、「WEBサービス発注道場」で扱う内容の一部を抜粋して紹介しています。
+追加情報に興味がある方は、「WEBサービス発注道場」へお越しください。</p>
+<p><a href="http://dojo.codebot.io#recuruitment"><img src="../img/banner.png"></a></p>
+
+<h2>まえふり</h2>
+
+<p>受託開発の終盤になって(もしくは検収作業をしている際に)、この端末で動かない、このバージョンでデザインがずれるなどの、思わず苦虫を噛みたくなる経験をしたことがある開発者も多いと思います。正直思い出すだけで震えます。ここから、この(誰も使っていない)Androidの端末に対応をするのかと思うと、まじで金返すからやめさせてくれと思うこともあります。</p>
+
+<p>このような事態にならないように、期待値の調整も含めて、対応するクライアントを明確にしましょう。また、発注者はシステムの特性に合わせて、どのクライアントに優先的に対応するのが効果的なのか考える手助けになると思います。</p>
+
+<p>以下では、弊社で利用しているクライアントサイドの対応時の概要と注意事項を記述しました。</p>
+
+<h2>概要</h2>
+
+<p><a href="http://dojo.codebot.io/img/posts/clientside-1.png" data-lity ><img src="http://dojo.codebot.io/img/posts/clientside-1.png" alt="image" /></a></p>
+<p><a href="http://dojo.codebot.io/img/posts/clientside-1.png" data-lity >拡大表示</a></p>
+
+<h2>クライアントプラットフォーム</h2>
+
+<p>対応できるクライアント。マルチプラットフォームの種類、優先度を考える。
+ブラウザベース、アプリベース(ネイティブ)のメリットとデメリット。</p>
+
+<ul>
+<li>サービスの要件別で、犠牲にできるものはなにか?
+
+<ul>
+<li>プラットフォーム対応が先か? 完成度(速度)が先か?</li>
+</ul>
+</li>
+<li>プラットフォーム別のプッシュ通知について考慮する</li>
+<li>PCデスクトップアプリはネイティブで実装できないか?
+
+<ul>
+<li>Swift, C#で開発できないか?</li>
+</ul>
+</li>
+<li>HTML5ベースは?
+
+<ul>
+<li>Cordova, Ionic, Monaca, PhoneGap</li>
+</ul>
+</li>
+<li>ネイティブコード出力系は?
+
+<ul>
+<li>React Native, Titanium, Xamarin, Rubymotion, Ruboto</li>
+</ul>
+</li>
+<li>Visual Studio 2015でクロスプラットフォームはどうか?</li>
+</ul>
+
+
+<h2>ネイティブアプリで考慮すること</h2>
+
+<ul>
+<li>One Source Multi Platform は幻想(ネイティブでは特に)
+
+<ul>
+<li>現状では保守できないし、UXも最適化できない</li>
+</ul>
+</li>
+<li>優先度を見極めて一つ一つネイティブAPIで開発する
+
+<ul>
+<li>iOSアプリ: Xcode7, Swift2, Storyboard, UIKit</li>
+<li>Androidアプリ: Android Studio2, Java, XML</li>
+<li>Windowsデスクトップアプリ: Visual Studio, C#</li>
+<li>Macデスクトップアプリ: Xcode7, Obj-C</li>
+</ul>
+</li>
+<li>サーバーサイドのREST APIは統一して利用する</li>
+</ul>
+
+
+<h2>ブラウザベースで考慮すること</h2>
+
+<h3>対応ブラウザ</h3>
+
+<p><a href="http://blog.webcreativepark.net/2015/11/25-132202.html">Web制作における対応ブラウザの選定方法 - to-R</a></p>
+
+<h3>JavaScriptで生成するViewの割合</h3>
+
+<ul>
+<li>サーバーでViewを作る割合と、JSでViewを作る割合はどのくらいか?</li>
+<li>JavaScriptフレームワークの利用度合はどのくらいか?</li>
+<li>JavaScriptフレームワークでVirtual DOMを使っているか?</li>
+<li>SPAのように作成する場合は、サーバーサイドはREST APIベースになる。</li>
+<li>つまり、サーバーサイドでViewの生成は行わない。</li>
+</ul>
+
+
+<h3>デザイン最適化の方法</h3>
+
+<h4>A. 同じHTMLファイル(DOM)を使い、CSSで最適化</h4>
+
+<ul>
+<li>viewportとmedia queryを使う。</li>
+<li>いわゆる、Responsive Designにする。</li>
+</ul>
+
+
+<blockquote><p>Googleでは、ウェブマスターが、レスポンシブウェブデザインを使用する、つまりすべてのデバイスに同じHTMLを配信し、CSSメディアクエリのみを使って各デバイスでのレンダリングを決定する、という業界のベストプラクティスに従うことをおすすめしています。</p></blockquote>
+
+<p><a href="https://developers.google.com/webmasters/mobile-sites/?hl=ja">ウェブマスター向けモバイルガイド</a></p>
+
+<h4>B. 別のHTMLファイル(DOM)にする</h4>
+
+<ul>
+<li>(1) User Agentでデバイスを判別する</li>
+<li>(2a) Nginxで別ドメインにリダイレクト(m.sample.com や sample.com/sp/ など)</li>
+<li>(2b) JSで別ドメインにリダイレクト(m.sample.com や sample.com/sp/ など)</li>
+</ul>
+
+
+<p><a href="http://motoshige.net/blog/archives/5159">【jQuery】PCとiPhone,iPad,Androidを判別してページを切り替え(リダイレクト)したいとき |</a></p>
+
+<h3>画像のサイズについて</h3>
+
+<ul>
+<li>Reninaディスプレイでもボケないようになっているか</li>
+<li>画像サイズの軽量化はおこなっているか</li>
+</ul>
+
+
+<h3>タッチディスプレイの考慮</h3>
+
+<ul>
+<li>マウス固有のイベント(hoverなど)を多用していないか</li>
+<li>タッチディスプレイ固有のイベント(フリックなど)を考慮しているか</li>
+</ul>
+
+
+<p><a href="http://www.html5rocks.com/ja/mobile/touch/">マルチタッチ ウェブブラウザ向けの開発 - HTML5 Rocks</a></p>
+
+<h3>Landscape(横向け)対応</h3>
+
+<ul>
+<li>横向けにしたときのUIを考慮しているか</li>
+<li>モバイル、タブレットそれぞれどのようなデザインにするか検討する</li>
+</ul>
+
+
+<h3>アプリ内のWebViewを考慮</h3>
+
+<ul>
+<li>指定アプリ(Facebook, Twitter, Lineなど)のWebViewでの表示を考慮する</li>
+<li>流入経路として大切なケースが多いのでしっかりと設計する</li>
+<li>ユーザーフローとして重要な場合は、動作確認もすること</li>
+<li>ただし、原則デフォルトブラウザでしっかり表示できていれば問題ないはず</li>
+</ul>
+
+<!-- /記事内容 -->
+<div class="application-box">
+  <div class="text center">
+    WEBサービス発注道場のお申し込みはこちら
+    <div class="arrow">↓↓↓</div>
+  </div>
+  <a href="https://docs.google.com/a/daraf.co.jp/forms/d/1TNE-FDB2So2sFV2ZqQ7R1yDLKkzJmSQGfiL2x1tL6Ao/viewform" class="btn"><i class="fa fa-sign-in"></i> お申し込みはこちら</a>
+</div>
+<div class="codebot-facebook">
+  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcodebotio%2F&tabs&width=500&height=155&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="155" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+</div>
+</div>
+</div>
+<div class="copyright center">
+  Copyright © 2016 CodebotDojo. All rights reserved.
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77798333-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
