@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <title>WEBサービスの認証機能とユーザー管理 - WEBサービス発注道場</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta property="og:title" content="WEBサービスの認証機能とユーザー管理" />
+  <meta property="og:site_name" content="WEBサービス発注道場" />
+  <meta property="og:description" content="WEBサービスの発注方法を身につけるためのプログラムです。WEBサービスの開発プロセスを学ぶ「スクール」という側面と、「発注コンサルティング」という側面を兼ねています。社内であれ、社外であれ、これからエンジニアを採用する場合であれ、エンジニアにコードを書いてもらうための方法を指導します。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://dojo.codebot.io/posts/authentication.html" />
+  <meta property="og:image" content="http://dojo.codebot.io/img/posts/authentication.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="shortcut icon" href="../img/fav.ico">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="../css/lity.css">
+  <link rel="stylesheet" type="text/css" href="../css/posts.css">
+  <script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script src="../js/lity.min.js"></script>
+</head>
+<body class="posts show">
+<header>
+  <div class="middle-content">
+    <div class="header-nav">
+      <a href="../index.html">
+        <i class="fa fa-home"></i>
+        <strong>トップ</strong>
+      </a>
+      <a href="index.html">
+        <i class="fa fa-newspaper-o"></i>
+        <strong>記事</strong>
+      </a>
+      <a href="https://docs.google.com/a/daraf.co.jp/forms/d/1IExex4cdIFgwxTyOOJq37aeQG8r8OewKfM7lLjHmRuU/viewform" target="_blank" class="contact">
+        <i class="fa fa-envelope"></i>
+        <strong>お問い合わせ</strong>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="article">
+<div class="middle-content">
+<div class="top-pop">
+  <a href="https://docs.google.com/a/daraf.co.jp/forms/d/1TNE-FDB2So2sFV2ZqQ7R1yDLKkzJmSQGfiL2x1tL6Ao/viewform" target="_blank">
+    <img src="../img/top-pop.png">
+  </a>
+</div>
+<div class="title-head">
+  <div class="dojo-logo">
+    <img src="../img/top-title.png" class="inline-block middle title" height="22" alt="WEBサービス発注道場">
+    <img src="../img/chara.png" class="inline-block middle logo" height="37px">
+  </div>
+  <h1>WEBサービスの認証機能とユーザー管理</h1>
+  <div class="info">
+    <div class="time inline-block middle">
+      <i class="fa fa-clock-o inline-block middle"></i>
+      <div class="inline-block middle">2016年5月24日</div>
+    </div>
+    <div class="author inline-block middle">
+      <i class="fa fa-user inline-block middle"></i>
+      <div class="inline-block middle">斉脇 一志</div>
+    </div>
+  </div>
+</div>
+<!-- 記事内容 -->
+<img src="../img/posts/authentication.jpg">
+
+<h2>まえふり</h2>
+
+<p>WEBサービスにしろ、モバイルアプリにしろ、ユーザー認証の仕組みを実装するケースはよくあります。組織管理やコンテンツへのアクセス権限の管理なども、ユーザー認証の方法を軸に考えることが大半です。以下では、ユーザー認証を実装する上で考えるポイントを簡単にではありますが整理してみました。</p>
+
+<h2>内容について</h2>
+<p>ここでは、「WEBサービス発注道場」で扱う内容の一部を抜粋して紹介しています。
+追加情報に興味がある方は、「WEBサービス発注道場」へお越しください。</p>
+<p><a href="http://dojo.codebot.io#recuruitment"><img src="../img/banner.png"></a></p>
+
+<h2>Sign up/in/out の実装</h2>
+
+<p>通常は、ブラウザのSession/Cookieの機構を使って管理するケースが多いとおもいます。
+ネイティブアプリでCookieの利用が微妙な場合は、サーバー側でトークンを発行し、クライアント側でそのトークンを保存しておき、リクエスト時にそのトークンでセッションを管理します。</p>
+
+<h2>APIの場合のアクセストークン</h2>
+
+<p>モバイルアプリの場合、サーバーサイドはJSONを返すだけの、APIサーバーになるケースがあります。その場合は、Session/Cookieを使って認証してもいいのですが、API呼び出し用のtokenを発行し、アプリにそのtokenを保存しておき(keychainなどに保存)、Request Header にセットするケースがあります。</p>
+
+<h2>ログイン管理のオプション</h2>
+
+<p>ログイン機構を作る場合は以下も実装することが多々あります。</p>
+
+<ul>
+<li>user activation(メールでの本人確認)</li>
+<li>reset password(パスワードを忘れた場合)</li>
+<li>remember me(ログイン保持の期間延長)</li>
+<li>session timeout(セッションタイムアウトの時間の設定)</li>
+</ul>
+
+
+<h2>Passwordの暗号化</h2>
+
+<p>サイト側の対策として、まずソルト（Salt）は必ず採用すべきです。ソルトというのは、ハッシュ値を計算する前にパスワードの前後に付け加える短い文字列です。</p>
+
+<pre><code>ソルト化ハッシュ = hash(パスワード + ソルト) ※注： +は連結演算子
+</code></pre>
+
+<p>ソルトによる効果は以下の通りです。</p>
+
+<ul>
+<li>同じパスワードを付けていても、ハッシュ値は異なるようにできる</li>
+<li>ハッシュ値の元となる文字列を長くすることにより、レインボーテーブル探索を妨害する</li>
+</ul>
+
+
+<p>これらの効果を得るために、ソルトには以下の要件が必要となります。</p>
+
+<ul>
+<li>ユーザーごとに異なるソルトを使う</li>
+<li>ある程度の長さ（20文字程度以上）を確保する</li>
+</ul>
+
+
+<p>教科書などでは、ソルトに乱数を使っている実装をよく見かけますが、原理的には乱数である必要はありません。通常、ソルトはハッシュ値とともに保存するので、オフライン攻撃者にとってソルトは秘密情報ではありません。また、ある程度長さが確保できれば、ユーザーIDそのものをソルトにすることもできますが、ユーザーIDを後から変更できるサイトの場合は実装に工夫が必要になります。</p>
+
+<p><a href="http://www.atmarkit.co.jp/ait/articles/1110/06/news154_3.html">ハッシュとソルト、ストレッチングを正しく理解する：本当は怖いパスワードの話 (3/4) - ＠IT</a></p>
+
+<h2>OAuthでのaccess_token取得</h2>
+
+<p>Facebook, Twitter, GitHub などでのOAuth認証を実装する場合がよくあります。大体の場合、callbackでaccess_tokenが返ってくるので、tokenをDBに保存し、外部サービスとの連携時にそのtokenを利用する。</p>
+
+<h2>二段階認証</h2>
+
+<p>最近は、二段階認証の実装が義務っぽい感じになっている印象があります。</p>
+
+<h2>Active DirectoryやGoogle Appsとの連携</h2>
+
+<p>法人向けのソフトウェアの場合は、Active DirectoryやGoogle Appsとの連携を想定する必要があります。</p>
+
+<h2>SMS認証</h2>
+
+<p>電話番号を入力してもらい、SMSでパスコード送信し本人確認する。</p>
+
+<h2>招待機能</h2>
+
+<p>Emailなどで招待を行える機能を実装するケースがよくあります。</p>
+
+<h2>審査フロー</h2>
+
+<p>会員登録時に本人確認以外に、審査をするケースがあります。例えば、決済代行サービスでは、登記簿のPDFを送信させるケースなどもあります。審査の段階などを確認できる画面の実装が必要になります。</p>
+
+<h2>ロール(Role)管理</h2>
+
+<p>ユーザーにRoleがある場合は、データとして管理します。ロールによって表示する画面が違う場合があります。例えば、クラウドソーシングサービスでは発注者と受注者で表示する画面が違います。その場合も、認証経路は同じにして、認証後にRoleをみて表示を切り替える場合があります。</p>
+
+<h2>プロフィール(Profile)管理</h2>
+
+<p>認証とは関係なく、取得する情報があります。また、マイページなどの場合は、公開の管理も必要です。</p>
+
+<h2>ログイン後の設定画面(Setting)</h2>
+
+<p>プロフィールデータの更新、パスワードの変更、メールアドレスの変更などを管理する必要があります。メールアドレスの変更などは、その都度で本人確認用のメールを送信する必要があります。</p>
+
+<!-- /記事内容 -->
+<div class="application-box">
+  <div class="text center">
+    WEBサービス発注道場のお申し込みはこちら
+    <div class="arrow">↓↓↓</div>
+  </div>
+  <a href="https://docs.google.com/a/daraf.co.jp/forms/d/1TNE-FDB2So2sFV2ZqQ7R1yDLKkzJmSQGfiL2x1tL6Ao/viewform" class="btn"><i class="fa fa-sign-in"></i> お申し込みはこちら</a>
+</div>
+<div class="codebot-facebook">
+  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcodebotio%2F&tabs&width=500&height=155&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="155" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+</div>
+</div>
+</div>
+<div class="copyright center">
+  Copyright © 2016 CodebotDojo. All rights reserved.
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77798333-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
