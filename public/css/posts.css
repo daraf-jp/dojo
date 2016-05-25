@@ -272,6 +272,10 @@ hr {
   border: 0;
   border-bottom: 1px solid #ccc;
 }
+li > ul{
+  padding-left: 18px;
+  margin: 0px 0px 5px;
+}
 blockquote {
   margin-bottom: 18px;
   font-family:georgia,serif;
