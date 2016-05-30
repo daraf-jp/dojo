@@ -192,203 +192,50 @@ header .header-nav a:last-child{
   top: 10px;
 }
 
-.article .middle-content{
+.news-content .middle-content{
   background-color: #fff;
   box-shadow: 0px 3px 20px rgba(0,0,0,0.25);
   position: relative;
   padding: 45px 65px;
 }
-.title-head{
+
+.news.index .title-head{
   border-bottom: 1px solid #ddd;
   padding: 0px 0px 25px;
   margin-bottom: 30px;
 }
-.title-head .time{
-  color: #555;
-  margin-right: 5px;
-}
-.title-head .author{
-  color: #555;
-}
-.title-head .dojo-logo{
+.news.index .title-head .dojo-logo{
   text-align: center;
   margin-bottom: 20px;
 }
-.title-head .dojo-logo img{
+.news.index .title-head .dojo-logo img{
   width: auto;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-blockquote {
-  margin: 0;
-  padding: 0;
+.news.index .title-head h1{
+  margin-bottom: 0px;
 }
-h1 {
-  font-size: 30px;
-  margin-bottom: 15px;
-  line-height: 1.4;
+.news.index .news-lists{
+  list-style-type: none;
+  padding-left: 0px;
 }
-h2 {
-  font-size: 26px;
-  border-left: 8px solid #FCAC00;
-  padding-left: 10px;
-  line-height: 1.4;
+.news.index .news-lists li{
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0px;
 }
-h3 {
-  font-size: 20px;
-  line-height: 1.2;
+.news.index .news-lists li:first-child{
+  padding-top: 0px;
 }
-h4 {
-  font-size: 16px;
-}
-h5 {
-  font-size: 14px;
-}
-h6 {
-  font-size: 13px;
-}
-h2 + h3{
-  margin-top: 15px;
-}
-h2 + p, h2 + ul, h2 + ol, h2 + img, blockquote + h2{
-  margin-top: 10px;
-}
-h3 + p, h3 + ul, h3 + ol, h3 + img, blockquote + h3{
-  margin-top: 5px;
-}
-p + h2, ul + h2, ol + h2, img + h2, blockquote + h2{
-  margin-top: 45px;
-}
-p + h3, ul + h3, ol + h3, img + h3, blockquote + h3{
-  margin-top: 25px;
-}
-hr {
-  margin: 0 0 19px;
-  border: 0;
-  border-bottom: 1px solid #ccc;
-}
-li > ul{
-  padding-left: 18px;
-  margin: 0px 0px 5px;
-}
-blockquote {
-  margin-bottom: 18px;
-  font-family:georgia,serif;
-  font-style: italic;
-  margin: 15px 0px;
-  position: relative;
-  background-color: #f8f8f8;
-  padding: 10px;
-}
-blockquote p {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.5;
-  margin-top: 0px;
-  margin-bottom: 0;
-  font-style: italic;
-  color: #333;
-  position: relative;
-}
-blockquote p:before{
-  content: url(https:/dl.dropboxusercontent.com/s/b6jid6mqxq3f130/quote.svg);
-  opacity: 0.3;
-  padding: 0px 5px;
-}
-code, pre {
-  font-family: Monaco, Andale Mono, Courier New, monospace;
-}
-code {
-  background-color: #fee9cc;
-  color: rgba(0, 0, 0, 0.75);
-  padding: 1px 3px;
-  font-size: 12px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-pre {
-  display: block;
-  padding: 14px;
-  margin: 0 0 18px;
-  line-height: 16px;
-  font-size: 11px;
-  border: 1px solid #d9d9d9;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-pre code {
-  background-color: #fff;
-  color:#737373;
-  font-size: 11px;
-  padding: 0;
-}
-sup {
-  font-size: 0.83em;
-  vertical-align: super;
-  line-height: 0;
-}
-* {
-  -webkit-print-color-adjust: exact;
+.news.index .news-lists li a{
+  font-size: 15px;
 }
 
 .copyright{
   margin-top: 15px;
   color: #7B4B02
 }
-.application-box{
-  padding: 20px 0px 30px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  margin-top: 40px;
-}
-.application-box .text{
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.2;
-}
-.application-box .arrow{
-  font-size: 20px;
-  margin: 0px 0px 5px;
-}
 .codebot-facebook iframe{
   display: block;
   margin: 45px auto 0px;
-}
-
-.posts.index .title-head h1{
-  margin-bottom: 0px;
-}
-.posts.index .article-lists{
-  list-style-type: none;
-  padding-left: 0px;
-}
-.posts.index .article-lists li{
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0px;
-}
-.posts.index .article-lists li:first-child{
-  padding-top: 0px;
-}
-.posts.index .article-lists li .article-info{
-  padding-left: 10px;
-}
-.posts.index .article-lists li .article-info .date{
-  font-size: 14px;
-  color: #888;
-}
-.posts.index .article-lists li .article-info .title a{
-  font-weight: bold;
-  color: #333;
-}
-.posts.index .article-lists li .article-info .title a:hover{
-  color: #0071CC;
-  text-decoration: underline;
 }
 
 @media(max-width: 1000px){
@@ -401,7 +248,7 @@ sup {
   .middle-content{
     width: 95%;
   }
-  .article .middle-content{
+  .news-content .middle-content{
     padding: 30px 10px;
   }
 }
@@ -422,10 +269,6 @@ sup {
   }
   h1{
     font-size: 28px;
-    line-height: 1.2;
-  }
-  h2{
-    font-size: 24px;
     line-height: 1.2;
   }
   header .header-nav{
@@ -472,13 +315,6 @@ sup {
   }
   .title-head .dojo-logo .logo{
     margin-top: 5px;
-  }
-  .posts.index .article-lists li .eye-catching{
-    width: 120px;
-  }
-  .posts.index .article-lists li .eye-catching .inner{
-    width: 120px;
-    height: 80px;
   }
   .copyright{
     font-size: 13px;
