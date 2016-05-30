@@ -528,6 +528,10 @@ header .mobile-header i{
 .next-box{
   margin-top: 30px;
 }
+.next-box img{
+  display: block;
+  margin-bottom: 10px;
+}
 
 .copyright{
   margin-top: 15px;
